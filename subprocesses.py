@@ -5,8 +5,6 @@ from io import BytesIO
 from openai import OpenAI
 from PIL import Image, ImageGrab
 
-client = OpenAI()
-
 # encodes images as string data to be sent to gpt
 def encode_image(image):
     buffered = BytesIO() # creates a memory buffer to handle the image in memory

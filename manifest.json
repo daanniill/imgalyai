@@ -6,12 +6,12 @@
     "permissions": ["storage", "activeTab", "background"],
     "host_permissions": ["http://localhost:5000/*"],
     "action":{
-        "default_popup": "popup.html",
-        "default_icon": "images/icon.png"
+        "default_popup": "templates/popup.html",
+        "default_icon": "static/images/icon.png"
     },
     "icons": {
-        "16": "images/icon.png",
-        "48": "images/icon.png",
-        "128": "images/icon.png"
+        "16": "static/images/icon.png",
+        "48": "static/images/icon.png",
+        "128": "static/images/icon.png"
     }
 }

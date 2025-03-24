@@ -1,6 +1,14 @@
+from flask import Flask, request, jsonify
+import base64
 from openai import OpenAI
+from io import BytesIO
+from PIL import Image
+from flask_cors import CORS
+
+app = Flask(__name__)
 
 client = OpenAI()
+CORS(app) 
 
 response = client.chat.completions.create(
     model='gpt-4o-mini',

@@ -1,5 +1,5 @@
-
 document.getElementById("refresh").addEventListener("click", fetchProcessedText);
+
 document.getElementById("copy").addEventListener("click", function() {
     const text = document.getElementById("output").innerText;
     navigator.clipboard.writeText(text).then(() => {
@@ -18,3 +18,6 @@ function fetchProcessedText() {
             console.error("Error:", error);
         });
 }
+
+// Auto-fetch on load
+fetchProcessedText();

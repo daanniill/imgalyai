@@ -9,6 +9,9 @@
         "default_popup": "templates/popup.html",
         "default_icon": "static/images/icon.png"
     },
+    "background": {
+        "service_worker": "static/background.js"
+    },
     "icons": {
         "16": "static/images/icon.png",
         "48": "static/images/icon.png",

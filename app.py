@@ -10,7 +10,7 @@ app = Flask(__name__)
 client = OpenAI()
 CORS(app) # Allows requests from the Chrome Extension
 
-processed_text = "" # defines a variable for processed text to be stored
+global processed_text = "" # defines a variable for processed text to be stored
 
 
 @app.route("/process_image", methods=["POST"])

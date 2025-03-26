@@ -32,7 +32,7 @@ def send_img_to_server(img_base64):
 
 # constant image monitoring, checks clipboard for new images
 # ensures that the script only runs if exectuted directly
-if __name__ == "__main__":
+def run():
     print("Monitoring clipboard for images...")
     last_img = None # variable that keeps track of last image grabbed from clipboard
     while True:

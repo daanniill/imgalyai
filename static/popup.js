@@ -9,9 +9,9 @@ document.getElementById("copy").addEventListener("click", function() {
 
 function fetchProcessedText() {
     fetch("http://localhost:5000/get_text")
-        .then(response => response.text())
-        .then(text => {
-            document.getElementById("output").innerText = text;
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("output").innerText = data.text;
         })
         .catch(error => {
             document.getElementById("output").innerText = "Error fetching text.";

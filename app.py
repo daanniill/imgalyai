@@ -16,6 +16,9 @@ processed_text = "" # defines a variable for processed text to be stored
 
 @app.route("/process_image", methods=["POST"])
 def process_image():
+
+    global processed_text
+
     data = request.json
     img_data = data.get("image")
     
@@ -47,13 +50,15 @@ def process_image():
             max_tokens=300,
         )
         processed_text = response.choices[0].message.content
-        print(processed_text)
         return jsonify({"message": "Image processed succesfully"})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+
+
 @app.route("/get_text", methods=["GET"])
 def get_text():
+    print(processed_text)
     return jsonify({'text': processed_text})
     
 def start_subprocesses():
